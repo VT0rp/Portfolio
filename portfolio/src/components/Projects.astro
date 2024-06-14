@@ -1,0 +1,155 @@
+---
+import HtmlIcon from '../components/icons/Html.astro';
+import CssIcon from '../components/icons/Css.astro';
+import BootstrapIcon from '../components/icons/Bootstrap.astro';
+import TypescriptIcon from '../components/icons/Typescript.astro';
+import AngularIcon from '../components/icons/Angular.astro';
+import JavaIcon from '../components/icons/Java.astro';
+import SpringBootIcon from '../components/icons/Springboot.astro';
+import MongoDBIcon from '../components/icons/Mongodb.astro';
+import SocialPill from '../components/SocialPill.astro';
+import GitHubIcon from '../components/icons/GitHub.astro';
+import MockoonIcon from '../components/icons/Mockoon.astro';
+import MysqlIcon from '../components/icons/Mysql.astro';
+import PhpIcon from '../components/icons/Php.astro';
+import JavaScriptIcon from '../components/icons/Javascript.astro';
+import TailwindIcon from '../components/icons/Tailwind.astro';
+import NodejsIcon from '../components/icons/Nodejs.astro';
+const TAGS = {
+    HTML: {
+        name: 'HTML',
+        class: 'bg-[#6633ee80]',
+        icon: HtmlIcon,
+    },
+    CSS: {
+        name: 'CSS',
+        class: 'bg-[#6633ee80]',
+        icon: CssIcon,
+    },
+    BOOTSTRAP: {
+        name: 'BootStrap',
+        class: 'bg-[#6633ee80]',
+        icon: BootstrapIcon,
+    },
+    TYPESCRIPT: {
+        name: 'TypeScript',
+        class: 'bg-[#6633ee80]',
+        icon: TypescriptIcon,
+    },
+    ANGULAR: {
+        name: 'Angular',
+        class: 'bg-[#6633ee80]',
+        icon: AngularIcon,
+    },
+    JAVA: {
+        name: 'Java',
+        class: 'bg-[#6633ee80]',
+        icon: JavaIcon,
+    },
+    SPRINGBOOT: {
+        name: 'SpringBoot',
+        class: 'bg-[#6633ee80]',
+        icon: SpringBootIcon,
+    },
+    MONGODB: {
+        name: 'MongoDB',
+        class: 'bg-[#6633ee80]',
+        icon: MongoDBIcon,
+    },
+    MOCKOON: {
+        name: 'Mockoon',
+        class: 'bg-[#6633ee80]',
+        icon: MockoonIcon,
+    },
+    MYSQL: {
+        name: 'MySQL',
+        class: 'bg-[#6633ee80]',
+        icon: MysqlIcon,  
+    },
+    PHP: {
+        name: 'PHP',
+        class: 'bg-[#6633ee80]',
+        icon: PhpIcon,  
+    },
+    JAVASCRIPT: {
+        name: 'JavaScript',
+        class: 'bg-[#6633ee80]',
+        icon: JavaScriptIcon,  
+    },
+    TAILWIND: {
+        name: 'Tailwind',
+        class: 'bg-[#6633ee80]',
+        icon: TailwindIcon,  
+    },
+    NODEJS: {
+        name: 'Node.Js',
+        class: 'bg-[#6633ee80]',
+        icon: NodejsIcon,  
+    },
+}
+const PROJECTS = [
+    {
+        title: 'Portfolio Web - Víctor Paredes Sala',
+        description: 'Portfolio Web para mostrar mi experiencia y conocimientos y los proyectos que he realizado',
+        link: '',
+        github: 'https://github.com/VT0rp/Portfolio',
+        image: '/assets/portfolio.webp',
+        tags: [TAGS.HTML, TAGS.CSS, TAGS.BOOTSTRAP, TAGS.TYPESCRIPT, TAGS.ANGULAR, TAGS.JAVA, TAGS.SPRINGBOOT, TAGS.MONGODB]
+    },
+    {
+        title: 'Factura Express - TFG',
+        description: 'Aplicación Web para manejar facturas en un entorno de trabajo basado en usuarios con roles (administrador y usuario).',
+        link: '',
+        github: 'https://github.com/VT0rp/TFG',
+        image: '/assets/facturaexpress.webp',
+        tags: [TAGS.HTML, TAGS.CSS, TAGS.BOOTSTRAP, TAGS.TYPESCRIPT, TAGS.ANGULAR, TAGS.JAVA, TAGS.SPRINGBOOT, TAGS.MONGODB]
+    },
+    {
+        title: 'Spotify clon - Nunsys',
+        description: 'Clon de Spotify con inicio de sesión, novedades, detalle canción y un historial de reproducciones',
+        link: '',
+        github: 'https://github.com/VT0rp/Spotify-like-project-Nunsys',
+        image: '/assets/kreitekfy.webp',
+        tags: [TAGS.HTML, TAGS.CSS, TAGS.BOOTSTRAP, TAGS.TYPESCRIPT, TAGS.ANGULAR, TAGS.JAVA, TAGS.SPRINGBOOT, TAGS.MYSQL]
+    },
+    {
+        title: 'User Manage - Nunsys',
+        description: 'Aplicación web para manejar usuarios',
+        link: '',
+        github: 'https://github.com/VT0rp/Project-user-manage-Nunsys',
+        image: '/assets/usermanage.webp',
+        tags: [TAGS.HTML, TAGS.CSS, TAGS.BOOTSTRAP, TAGS.TYPESCRIPT, TAGS.ANGULAR, TAGS.MYSQL]
+    },
+    {
+        title: 'Tienda Web - Nunsys',
+        description: 'Frontend tienda web sencilla',
+        link: '',
+        github: 'https://github.com/VT0rp/Proyecto-tienda-Nunsys',
+        image: '/assets/tiendaweb.webp',
+        tags: [TAGS.HTML, TAGS.CSS, TAGS.BOOTSTRAP, TAGS.TYPESCRIPT, TAGS.ANGULAR, TAGS.MOCKOON]
+    }
+]
+---
+
+{
+    PROJECTS.map(({title, description, link, github, image, tags }) => (
+        <article class="mb-10">
+            <h3 class="text-2xl font-semibold text-yellow-200 mb-2">{title}</h3>
+            <p class="text-lg mb-4 text-pretty">{description}</p>
+            <ul class="flex gap-x-4 mb-2 flex-wrap">
+                {tags.map(tag => (
+                    <li class="mb-2">
+                        <span class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-2 px-1`}>
+                            <tag.icon class="size-4"/>{tag.name}
+                        </span>
+                    </li>
+                ))}
+            </ul>
+            <img class="rounded shadow-2xl shadow-white/10 mb-1" src={image} alt={`Captura de pantalla del proyecto ${title}`} />
+            <SocialPill href={github}>
+					<GitHubIcon class="size-4 md:size-6" />
+					GitHub
+				</SocialPill>
+        </article>
+    ))
+}

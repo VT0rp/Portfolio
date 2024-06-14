@@ -1,0 +1,99 @@
+---
+import HtmlIcon from '../components/icons/Html.astro';
+import CssIcon from '../components/icons/Css.astro';
+import BootstrapIcon from '../components/icons/Bootstrap.astro';
+import TypescriptIcon from '../components/icons/Typescript.astro';
+import AngularIcon from '../components/icons/Angular.astro';
+import JavaIcon from '../components/icons/Java.astro';
+import SpringBootIcon from '../components/icons/Springboot.astro';
+import MongoDBIcon from '../components/icons/Mongodb.astro';
+import MockoonIcon from '../components/icons/Mockoon.astro';
+import MysqlIcon from '../components/icons/Mysql.astro';
+import PhpIcon from '../components/icons/Php.astro';
+import JavaScriptIcon from '../components/icons/Javascript.astro';
+import TailwindIcon from '../components/icons/Tailwind.astro';
+import NodejsIcon from '../components/icons/Nodejs.astro';
+const TAGS = [
+    {
+        name: 'HTML',
+        class: 'bg-[#6633ee80]',
+        icon: HtmlIcon,
+    },
+    {
+        name: 'CSS',
+        class: 'bg-[#6633ee80]',
+        icon: CssIcon,
+    },
+    {
+        name: 'BootStrap',
+        class: 'bg-[#6633ee80]',
+        icon: BootstrapIcon,
+    },
+    {
+        name: 'TypeScript',
+        class: 'bg-[#6633ee80]',
+        icon: TypescriptIcon,
+    },
+    {
+        name: 'Angular',
+        class: 'bg-[#6633ee80]',
+        icon: AngularIcon,
+    },
+    {
+        name: 'Java',
+        class: 'bg-[#6633ee80]',
+        icon: JavaIcon,
+    },
+    {
+        name: 'SpringBoot',
+        class: 'bg-[#6633ee80]',
+        icon: SpringBootIcon,
+    },
+    {
+        name: 'MongoDB',
+        class: 'bg-[#6633ee80]',
+        icon: MongoDBIcon,
+    },
+    {
+        name: 'Mockoon',
+        class: 'bg-[#6633ee80]',
+        icon: MockoonIcon,
+    },
+    {
+        name: 'MySQL',
+        class: 'bg-[#6633ee80]',
+        icon: MysqlIcon,  
+    },
+    {
+        name: 'PHP',
+        class: 'bg-[#6633ee80]',
+        icon: PhpIcon,  
+    },
+    {
+        name: 'JavaScript',
+        class: 'bg-[#6633ee80]',
+        icon: JavaScriptIcon,  
+    },
+    {
+        name: 'Tailwind',
+        class: 'bg-[#6633ee80]',
+        icon: TailwindIcon, 
+    },
+    {
+        name: 'Node.js',
+        class: 'bg-[#6633ee80]',
+        icon: NodejsIcon, 
+    }
+]
+---
+<article class="mb-10">
+    <ul class="flex gap-x-4 mb-2 flex-wrap">
+        {TAGS.map(tag => (
+            <li class="mb-2">
+                <span class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-2 px-1`}>
+                    <tag.icon class="size-4"/>{tag.name}
+                </span>
+            </li>
+        ))}
+    </ul>
+</article>

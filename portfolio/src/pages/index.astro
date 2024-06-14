@@ -1,0 +1,70 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Badge from '../components/Badge.astro';
+import LinkedinIcon from '../components/icons/Linkedin.astro';
+import GitHubIcon from '../components/icons/GitHub.astro';
+import SocialPill from '../components/SocialPill.astro';
+import MailIcon from '../components/icons/Mail.astro';
+import Experience from '../components/Experience.astro';
+import SectionContainer from '../components/SectionContainer.astro';
+import BriefcaseIcon from '../components/icons/Briefcase.astro';
+import CodeIcon from '../components/icons/Code.astro';
+import Projects from '../components/Projects.astro';
+import CvIcon from '../components/icons/Cv.astro';
+import ComputerIcon from '../components/icons/Computer.astro';
+import Technology from '../components/Technology.astro';
+---
+
+<Layout 
+title="Portfolio de Víctor Paredes - Desarrollador y Programador Web"
+description='Contrata a Víctor Paredes Sala para desarrollar tu aplicación web.'
+>
+	<main class="px-4">
+		<SectionContainer id="sobre-mi" class="py-44 pb-32">
+			<img class="rounded-full size-48 mb-4" src="/assets/imagenpared.jpg" alt="portfolio photo">
+			<h1 class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-4">Hola soy Víctor <a href="https://www.linkedin.com/in/v%C3%ADctor-paredes-sala/" target="_blank" rel="noopener" class="flex justify-center items-center"><Badge>Disponible para trabajar</Badge></a></h1>
+			<h2 class="text-xl lg:text-2xl text-wrap max-w-[700px]">Recién graduado. <span class="text-yellow-200/90">Desarrollador Web </span> con preferencia por el backend pero igualmente apasionado por el frontend. <span class="text-red-200/90">De Valencia, España</span>. <span class="opacity-75">En busca de nuevos retos y aprender en el sector</span>.</h2>
+			<nav class="flex gap-4 mt-8 flex-wrap" id="contacto">
+				<SocialPill href="https://www.linkedin.com/in/v%C3%ADctor-paredes-sala/">
+					<LinkedinIcon class="size-4 md:size-6" />
+					Linkedin
+				</SocialPill>
+				<SocialPill href="https://github.com/VT0rp">
+					<GitHubIcon class="size-4 md:size-6" />
+					GitHub
+				</SocialPill>
+				<SocialPill href="mailto:victorparedessala@gmail.com">
+					<MailIcon class="size-4 md:size-6" />
+					victorparedessala@gmail.com
+				</SocialPill>
+				<SocialPill href="mailto:victorparedessala@gmail.com">
+					<CvIcon class="size-4 md:size-6" />
+					CV
+				</SocialPill>
+			</nav>
+		</SectionContainer>
+		<!-- Experiencia -->
+		<SectionContainer id="experiencia">
+			<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+				<BriefcaseIcon class="size-6" />
+				Experiencia laboral
+			</h2>
+			<Experience />
+		</SectionContainer>
+		<!-- Proyectos -->
+		<SectionContainer id="proyectos">
+			<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+				<CodeIcon class="size-7" />
+				Proyectos
+			</h2>
+			<Projects />
+		</SectionContainer>
+		<SectionContainer id="tecnologias">
+			<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+				<ComputerIcon class="size-7" />
+				Tecnologías
+			</h2>
+			<Technology />
+		</SectionContainer>
+	</main>
+</Layout>

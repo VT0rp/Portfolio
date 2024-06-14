@@ -1,0 +1,20 @@
+---
+import ExperienceItem from '../components/ExperienceItem.astro';
+const EXPERIENCE = [
+    {
+        date: 'Marzo 2024 - Junio 2024',
+        title: 'Desarrollador de  aplicaciones Web fullstack - Nunsys',
+        description: 'Bootcamp fullstack. Desarrollo de tienda online, aplicación para manejar usuarios y un clon de Spotify. Patrones de diseño. Principios SOLID. Arquitectura hexagonal. API REST. Angular. SpringBoot. Git. Docker. DDD y Clean Architecture. Clean code y buenas prácticas. Testing.'
+    }
+]
+---
+<ol class="relative border-s border-gray-200 ml-3">
+    {
+        EXPERIENCE.map(experience => (
+            <li class="mb-10 ms-4">
+                <ExperienceItem {... experience} />
+            </li>
+        ))
+    }                
+</ol>
+
