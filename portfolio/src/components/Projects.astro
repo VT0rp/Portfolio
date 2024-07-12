@@ -141,7 +141,7 @@ const PROJECTS = [
     PROJECTS.map(({title, description, link, github, image, tags }) => (
         <article class="mb-10">
             <h3 class="text-2xl font-semibold text-yellow-200 mb-2">{title}</h3>
-            <p class="text-lg mb-4 text-pretty">{description}</p>
+            <p class="text-white text-lg mb-4 text-pretty">{description}</p>
             <ul class="flex gap-x-4 mb-2 flex-wrap">
                 {tags.map(tag => (
                     <li class="mb-2">
@@ -153,7 +153,7 @@ const PROJECTS = [
             </ul>
             <img class="rounded shadow-2xl shadow-white/10 mb-1" src={image} alt={`Captura de pantalla del proyecto ${title}`} />
             <SocialPill href={github} target="_blank" rel="noopener">
-					<GitHubIcon class="size-4 md:size-6" />
+					<GitHubIcon class="text-white size-4 md:size-6" />
 					GitHub
 				</SocialPill>
         </article>
